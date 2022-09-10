@@ -1,0 +1,68 @@
+---------------------------------------------------------------------------------------------------------------------------
+CRIAR PROJETO ->
+ COMPOSER CREATE-PROJECT LARAVEL/LARAVEL NOME_DO_PROJETO
+
+---------------------------------------------------------------------------------------------------------------------------
+SUBIR SERVIDOR –> PHP ARTISAN SERVE
+
+---------------------------------------------------------------------------------------------------------------------------
+CRIAR A ROTA RESOURCE CONTROLLER COM O SEGUINTE COMANDO DA DOCUMENTAÇAO LARAVEL ->
+php artisan make:controller PhotoController --resource
+
+---------------------------------------------------------------------------------------------------------------------------
+CRIAR A TABELA NO BANCO DE DADOS USANDO O SEGUINTES PASSOS:
+php artisan make:migration create_tbtarefas_table
+
+---------------------------------------------------------------------------------------------------------------------------
+EXECUTAR O SEGUINTO COMANDO:
+ php artisan migrate’
+
+---------------------------------------------------------------------------------------------------------------------------
+CRIAR O MODEL COM O SEGUINTE COMANDO:
+php artisan make:model
+
+---------------------------------------------------------------------------------------------------------------------------
+CRIAR O MODEL JUNTO COM A MIGRATION COM SEGUINTE COMANDO:
+php artisan make:model Flight --migration
+
+---------------------------------------------------------------------------------------------------------------------------
+############  Gerar um modelo e uma classe FlightFactory #######
+
+php artisan make:model Flight --factory
+php artisan make:model Flight -f
+
+------------------- Gerar um modelo e uma classe FlightSeeder -----------------------------------------------
+
+php artisan make:model Flight --seed
+php artisan make:model Flight -s
+
+------------------ Gerar um modelo e uma classe FlightController -----------------------------------------------
+php artisan make:model Flight --controller
+php artisan make:model Flight -c
+
+------------------ Gerar um modelo, classe de recurso FlightController, e classes de pedido de formulário -----------------------------------------------
+
+php artisan make:model Flight --controller --resource --requests
+php artisan make:model Flight -crR
+
+
+------------------ Gerar um modelo e uma classe FlightPolicy ----------------------------------------------------------
+php artisan make:model Flight --policy
+
+------------------- Gerar um modelo e uma migração, fábrica, semeador, e controlador --------------------------------
+
+php artisan make:model Flight -mfsc
+
+----Atalho para gerar um modelo, migração, fábrica, semeador, política, controlador, e pedidos de formulários -----------------------------------------------
+
+php artisan make:model Flight --all
+
+--------------------------  Generate a pivot model -----------------------------------------------
+
+php artisan make:model Member --pivot
+
+---------------------------------------------------------------------------------------------------------------------------
+GERAR CHAVE
+php artisan key:generate
+
+---------------------------------------------------------------------------------------------------------------------------
