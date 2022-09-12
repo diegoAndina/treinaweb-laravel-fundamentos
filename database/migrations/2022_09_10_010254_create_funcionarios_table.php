@@ -17,8 +17,8 @@ class CreateFuncionariosTable extends Migration
             $table->id();
             $table->string('nome', 100);
             $table->char('cpf', 11);
-            $table->boolean('situacao');
             $table->float('salario', 7, 2);
+            $table->boolean('situacao');
             $table->date('data_contratacao');
             $table->date('data_demissao')->nullable();
             $table->timestamps();

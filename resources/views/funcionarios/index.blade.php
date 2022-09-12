@@ -38,6 +38,7 @@
             </tr>
         </thead>
         <tbody>
+
             @foreach ($funcionarios as $funcionario)
                 <tr>
                     @if ($funcionario->situacao)
@@ -61,6 +62,8 @@
             @endforeach
         </tbody>
     </table>
-
+    <div class="my-3 container">
+        {{ $funcionarios->links() }}
+    </div>
     <a class="btn btn-success" href="{{ route('funcionarios.create') }}">Novo funcionario</a>
 @endsection

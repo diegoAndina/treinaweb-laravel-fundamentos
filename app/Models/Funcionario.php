@@ -9,7 +9,7 @@ class Funcionario extends Model
 {
 
     protected $fillable = [
-        'nome', 'cpf', 'ativo', 'salario', 'data_contratacao', 'data_demissao'
+        'nome', 'cpf', 'situacao', 'salario', 'data_contratacao', 'data_demissao'
     ];
     use HasFactory;
 }

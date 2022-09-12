@@ -13,7 +13,7 @@ class StoreFuncionarioRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,11 @@ class StoreFuncionarioRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'nome' => 'bail|string|required|min:3|max:100|unique:funcionarios',
+            'cpf' => 'bail|required|min:8|max:11|unique:funcionarios',
+            'salario' => 'bail|required|numeric|min:600|max:99999.99|unique:funcionarios',
+            'situacao' => 'boolean|required|',
+            'data_contratacao' => 'date|required|',
         ];
     }
 }

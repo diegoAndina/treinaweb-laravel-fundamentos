@@ -37,7 +37,7 @@ Route::get('/saudacao/{nome?}', Saudacao::class);
 // Route::get('/clients/{id}/edit', [ClientController::class, 'edit'])->name('clients.edit');
 // Route::put('/clients/{id}', [ClientController::class, 'update'])->name('clients.update');
 // Route::delete('/clients/{id}', [ClientController::class, 'destroy'])->name('clients.destroy');
-
+Route::get('/salvar ', [FuncionarioController::class, 'salvar'])->name('salvarDados');
 Route::resource('clients', ClientController::class);
 
 Route::resource('funcionarios', FuncionarioController::class);

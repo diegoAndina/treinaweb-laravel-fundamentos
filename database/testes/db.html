@@ -1,0 +1,247 @@
+<div class="CodeMirror-code" role="presentation" style="">
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">DROP</span> <span class="cm-keyword">TABLE</span> IF EXISTS `myTable`<span class="cm-punctuation">;</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">CREATE</span> <span class="cm-keyword">TABLE</span> `myTable` <span class="cm-bracket">(</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  `id` <span class="cm-builtin">mediumint</span><span class="cm-bracket">(</span><span class="cm-number">8</span><span class="cm-bracket">)</span> <span class="cm-builtin">unsigned</span> <span class="cm-keyword">NOT</span> <span class="cm-atom">NULL</span> auto_increment<span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  `nome` <span class="cm-builtin">varchar</span><span class="cm-bracket">(</span><span class="cm-number">255</span><span class="cm-bracket">)</span> default <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  `cpf` <span class="cm-builtin">varchar</span><span class="cm-bracket">(</span><span class="cm-number">15</span><span class="cm-bracket">)</span> default <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  `data_contratacao` <span class="cm-builtin">varchar</span><span class="cm-bracket">(</span><span class="cm-number">255</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  `situacao` <span class="cm-builtin">varchar</span><span class="cm-bracket">(</span><span class="cm-number">255</span><span class="cm-bracket">)</span> default <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  `salario` <span class="cm-builtin">varchar</span><span class="cm-bracket">(</span><span class="cm-number">100</span><span class="cm-bracket">)</span> default <span class="cm-atom">NULL</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;">  PRIMARY KEY <span class="cm-bracket">(</span>`id`<span class="cm-bracket">)</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-bracket">)</span> AUTO_INCREMENT<span class="cm-operator">=</span><span class="cm-number">1</span><span class="cm-punctuation">;</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">INSERT</span> <span class="cm-keyword">INTO</span> `myTable` <span class="cm-bracket">(</span>`nome`<span class="cm-punctuation">,</span>`cpf`<span class="cm-punctuation">,</span>`data_contratacao`<span class="cm-punctuation">,</span>`situacao`<span class="cm-punctuation">,</span>`salario`<span class="cm-bracket">)</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword">VALUES</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Emily Becker"</span><span class="cm-punctuation">,</span><span class="cm-string">"201879957"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"0"</span><span class="cm-punctuation">,</span><span class="cm-string">"5151.33"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Patrick Jennings"</span><span class="cm-punctuation">,</span><span class="cm-string">"139312902"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"6433.28"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Anjolie O'Neill"</span><span class="cm-punctuation">,</span><span class="cm-string">"198766224"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"0"</span><span class="cm-punctuation">,</span><span class="cm-string">"8312.60"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Nero Dixon"</span><span class="cm-punctuation">,</span><span class="cm-string">"186475771"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"3309.49"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Quamar Ingram"</span><span class="cm-punctuation">,</span><span class="cm-string">"118546016"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"0"</span><span class="cm-punctuation">,</span><span class="cm-string">"1395.38"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Rebekah Vazquez"</span><span class="cm-punctuation">,</span><span class="cm-string">"358065244"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"2865.13"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Sacha Berger"</span><span class="cm-punctuation">,</span><span class="cm-string">"444603313"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"2143.68"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Wanda Wooten"</span><span class="cm-punctuation">,</span><span class="cm-string">"299704130"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"3226.93"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Eagan Pate"</span><span class="cm-punctuation">,</span><span class="cm-string">"223435939"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"5046.52"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Callum Huber"</span><span class="cm-punctuation">,</span><span class="cm-string">"43308149"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"0"</span><span class="cm-punctuation">,</span><span class="cm-string">"60.24"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Andrew Robertson"</span><span class="cm-punctuation">,</span><span class="cm-string">"1341340"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"5769.65"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Chloe Grant"</span><span class="cm-punctuation">,</span><span class="cm-string">"322529139"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"5307.19"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">27</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Carter Santos"</span><span class="cm-punctuation">,</span><span class="cm-string">"107428178"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"4404.60"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">28</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Aphrodite Weiss"</span><span class="cm-punctuation">,</span><span class="cm-string">"79257257"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"7420.76"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">29</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Daquan Velasquez"</span><span class="cm-punctuation">,</span><span class="cm-string">"464232230"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"1486.47"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">30</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Abel Hartman"</span><span class="cm-punctuation">,</span><span class="cm-string">"37168742"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"0"</span><span class="cm-punctuation">,</span><span class="cm-string">"39.15"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">31</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Stephen Jackson"</span><span class="cm-punctuation">,</span><span class="cm-string">"38199722"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"1"</span><span class="cm-punctuation">,</span><span class="cm-string">"4492.30"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">32</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Kameko Waller"</span><span class="cm-punctuation">,</span><span class="cm-string">"37735191"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"0"</span><span class="cm-punctuation">,</span><span class="cm-string">"4836.76"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">33</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Brenden Barlow"</span><span class="cm-punctuation">,</span><span class="cm-string">"4495233"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"0"</span><span class="cm-punctuation">,</span><span class="cm-string">"6273.05"</span><span class="cm-bracket">)</span><span class="cm-punctuation">,</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">34</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"> &nbsp;<span class="cm-bracket">(</span><span class="cm-string">"Barry Valdez"</span><span class="cm-punctuation">,</span><span class="cm-string">"212807419"</span><span class="cm-punctuation">,</span><span class="cm-string">"09-11-1988"</span><span class="cm-punctuation">,</span><span class="cm-string">"0"</span><span class="cm-punctuation">,</span><span class="cm-string">"4748.23"</span><span class="cm-bracket">)</span><span class="cm-punctuation">;</span></span></pre>
+    </div>
+    <div style="position: relative;">
+        <div class="CodeMirror-gutter-wrapper" aria-hidden="true" style="left: -28.998px;">
+            <div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">35</div>
+        </div>
+        <pre class=" CodeMirror-line "
+            role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre>
+    </div>
+</div>
