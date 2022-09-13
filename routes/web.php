@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FuncionarioController;
+use App\Http\Controllers\FiltrarFuncionarioController;
 use App\Http\Controllers\Saudacao;
 use App\Http\Controllers\SiteController;
 
@@ -39,6 +40,6 @@ Route::get('/saudacao/{nome?}', Saudacao::class);
 // Route::delete('/clients/{id}', [ClientController::class, 'destroy'])->name('clients.destroy');
 Route::get('/salvar ', [FuncionarioController::class, 'salvar'])->name('salvarDados');
 Route::resource('clients', ClientController::class);
-Route::get('/funcionarios/filtrar', [FuncionarioController::class, 'filtrarDados'])->name('filtrarFuncionarios');
+Route::get('/funcionarios/filtrar', [FiltrarFuncionarioController::class, 'filtrarDados'])->name('filtrarFuncionarios');
 
 Route::resource('funcionarios', FuncionarioController::class);
