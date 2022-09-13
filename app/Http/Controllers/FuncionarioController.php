@@ -16,44 +16,74 @@ class FuncionarioController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(Request $request)
+
     {
-        if ($request->nome && $request->situacao === "0" || $request->situacao === '1') {
-            $funcionarios = Funcionario::where('nome', 'like', "%$request->nome%")
-                ->where('situacao', $request->situacao);
-            $funcionarios = $funcionarios->get();
+        // --------------------- VERIFICA SE  EXISTE DADOS NA REQUEST  ----------------------------
+        $formRequest = $request->except('_token');
 
+        if ($formRequest == []) {
             return view('funcionarios.index', [
-                'funcionarios' => $funcionarios,
-                'listaTodos' => true
-            ]);
-        }
-        if ($request->nome) {
-
-            $funcionarios = Funcionario::where('nome', 'like', "%$request->nome%");
-            $funcionarios = $funcionarios->get();
-
-            return view('funcionarios.index', [
-                'funcionarios' => $funcionarios,
-                'listaTodos' => true
-            ]);
-        }
-        if ($request->situacao || $request->situacao === "0") {
-            $funcionarios = Funcionario::where('situacao', $request->situacao);
-            $funcionarios = $funcionarios->get();
-            return view('funcionarios.index', [
-                'funcionarios' => $funcionarios,
-                'listaTodos' => true
-            ]);
-        }
-
-        if ($request->situacao == null && $request->nome == null) {
-            $funcionarios = Funcionario::all();
-
-            return view('funcionarios.index', [
-                'funcionarios' => Funcionario::paginate(10),
+                'funcionarios' => Funcionario::orderBy('nome')->get(),
                 'listaTodos' => false
             ]);
+        } else {
+
+
+            if ($formRequest['nome'] === null && $formRequest['situacao'] === null && $formRequest['exibir'] === null) {
+                $erroNoFiltro = true;
+                return view('funcionarios.index', [
+                    'funcionarios' => Funcionario::orderBy('nome')->get(),
+                    'listaTodos' => false,
+                    'erroNoFiltro' => $erroNoFiltro,
+                ]);
+            }
+            if ($formRequest['exibir'] == null) {
+                $formRequest['exibir'] = 10;
+            }
+            if ($formRequest['situacao'] != null && $formRequest['nome'] != null) {
+                $funcionarios = Funcionario::where('situacao', $formRequest['situacao'])
+                    ->where('nome', 'like', "%$formRequest[nome]%")
+                    ->paginate($formRequest['exibir']);
+                return view('funcionarios.index', [
+                    'funcionarios' => $funcionarios,
+                    'listaTodos' => true,
+                ]);
+            }
+
+            if ($formRequest['nome'] != null) {
+                $funcionarios = Funcionario::where('nome', 'like', "%$formRequest[nome]%")->paginate($formRequest['exibir']);
+                return view('funcionarios.index', [
+                    'funcionarios' => $funcionarios,
+                    'listaTodos' => true,
+                ]);
+            }
+            if ($formRequest['situacao'] != null) {
+
+                $funcionarios = Funcionario::where('situacao', $formRequest['situacao'])->paginate($formRequest['exibir']);
+
+                return view('funcionarios.index', [
+                    'funcionarios' => $funcionarios,
+                    'listaTodos' => true,
+
+                ]);
+            }
         }
+
+
+        // -------------- VERIFICA SE  EXISTE  NOME DENTRO DA REQUEST  E FILTRA OS DADOS ---------------------------
+
+    }
+
+    public function filtrarDados(Request $request)
+    {
+
+        // } else {
+        //     $erroNoFiltro = false;
+        //     return  view('/funcionarios.index', [
+        //         'erroNoFiltro' => $erroNoFiltro,
+        //         'listaTodos' => true
+        //     ]);
+        // }
     }
 
     /**
@@ -77,7 +107,7 @@ class FuncionarioController extends Controller
         $form_dados = $request->except('_token');
 
         Funcionario::create($form_dados);
-        return redirect('/funcionarios');
+        return redirect()->route('funcionarios.index');
     }
 
     public  function salvar()
