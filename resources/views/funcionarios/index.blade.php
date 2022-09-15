@@ -3,16 +3,16 @@
 @section('conteudo')
     <div class="container  ">
         <div class="row justify-content-center">
-            <h1 class="col">Lista de Funcionários</h1>
+            <h1 class="col listaDeFuncionarios">Lista de Funcionários</h1>
             <div class="col">
                 <form class="" action='/funcionarios/filtrar' method="get">
                     @csrf
                     @if (isset($nome_valido))
                         <input type="text" name="nome" id="nome" autofocus='true' placeholder="nome"
-                            value="{{ $nome_valido }}" value="{{ old('nome') }}" style="width: 80px">
+                            class="inputNome" value="{{ $nome_valido }}" style="width: 80px">
                     @else
                         <input type="text" name="nome" id="nome" autofocus='true' placeholder="nome"
-                            value="" style="width: 80px">
+                            class="inputNome" style="width: 80px">
                     @endif
                     <button type="submit" class="btn btn-info ">Filtrar</button>
                 </form>
@@ -23,7 +23,6 @@
             </div>
         </div>
     </div>
-
     <table class="table mt-4">
         <thead>
             <tr>
@@ -42,21 +41,18 @@
                 <div class="alert alert-warning text-center fs-3 my-4">Sua pesquisa não retornou resultados!</div>
             @else
                 @foreach ($funcionarios as $funcionario)
+                    @if (isset($nome_valido))
+                        <input type="hidden" name="arrayNomes" id="inputNomeHidden" value="{{ $nome_valido }}"
+                            class="inputNomes">
+                    @else
+                        <input type="hidden" name="arrayNomes" id="inputNomeHidden" value="" class="inputNomes">
+                    @endif
                     <tr>
-
-                        @if (request()->get('nome') != null)
-                            <td>
-                                <a href="{{ route('funcionarios.show', $funcionario) }}">
-                                    {{ $funcionario->nome }}
-                                </a>
-                            </td>
-                        @else
-                            <td>
-                                <a href="{{ route('funcionarios.show', $funcionario) }}">
-                                    {{ $funcionario->nome }}
-                                </a>
-                            </td>
-                        @endif
+                        <td>
+                            <a href="{{ route('funcionarios.show', $funcionario) }} " class="funcionarios">
+                                {{ $funcionario->nome }}
+                            </a>
+                        </td>
                         @if ($funcionario->situacao)
                             <th scope="row">Ativo</th>
                         @else
@@ -78,6 +74,7 @@
             @endif
         </tbody>
     </table>
+
     <div class="container  d-flex justify-content-center ">
         <div class="my-2  w-25">
             {{ $funcionarios->appends([
@@ -86,4 +83,5 @@
         </div>
     </div>
     <a class="btn btn-success" href="{{ route('funcionarios.create') }}">Novo funcionario</a>
+
 @endsection
