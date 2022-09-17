@@ -1,0 +1,41 @@
+{
+    "fields": [
+        {
+            "name": "nome",
+            "type": "string"
+        },
+        {
+            "name": "carga_horaria",
+            "type": "string"
+        },
+        {
+            "name": "valor",
+            "type": "string"
+        },
+        {
+            "name": "funcionario_id",
+            "type": "integer#unsigned"
+        }
+    ],
+    "foreign_keys": [
+        {
+            "column": "user_id",
+            "references": "id",
+            "on": "funcionarios",
+            "onDelete": "cascade"
+        }
+    ],
+    "relationships": [
+        {
+            "name": "funcionario_id",
+            "type": "belongsTo",
+            "class": "App\\Models\\Funcionario"
+        }
+    ],
+    "validations": [
+        {
+            "field": "nome",
+            "rules": "required|max:100"
+        }
+    ]
+}

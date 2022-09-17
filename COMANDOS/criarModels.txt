@@ -32,3 +32,6 @@
 ----------------------------------------------------------------
 
 php artisan crud:generate Teste --fields='titulo#string; content#text; categoria#string;' --view-path=admin --controller-namespace=App\Http\Controllers\Admin --route-group=admin --form-helper=html
+
+
+php artisan crud:generate Empresa --fields_from_file="/crud_paths/cliente.json"  --view-path=admin --controller-namespace=App\Http\Controllers\Admin --route-group=admin --form-helper=html
