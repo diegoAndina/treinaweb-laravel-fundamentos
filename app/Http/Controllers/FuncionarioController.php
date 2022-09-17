@@ -10,6 +10,11 @@ use Illuminate\Http\Request;
 
 class FuncionarioController extends Controller
 {
+
+    /**
+     * metodo testar
+     */
+
     /**
      * Display a listing of the resource.
      *

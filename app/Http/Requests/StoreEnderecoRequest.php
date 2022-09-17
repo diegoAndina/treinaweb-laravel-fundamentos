@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateFlighRequest extends FormRequest
+class StoreEnderecoRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class UpdateFlighRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,13 @@ class UpdateFlighRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            // 'logradouro' => 'required|min:10|max:255',
+            // 'numero' => 'required|max:20',
+            // 'bairro' => 'required|min:3|max:50',
+            // 'cidade' => 'required|min:3|max:80',
+            // 'cpf' => 'required|min:5|max:8|numeric',
+            // 'estado' => 'required|max:2',
+
         ];
     }
 }

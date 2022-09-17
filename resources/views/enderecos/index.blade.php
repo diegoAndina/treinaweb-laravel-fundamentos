@@ -1,7 +1,7 @@
 @extends('app')
 @section('titulo', 'Lista de Funcionários')
 @section('conteudo')
-    <div class="container  ">
+    {{-- <div class="container  ">
         <div class="row justify-content-center">
             <h1 class="col listaDeFuncionarios">Lista de Funcionários</h1>
             <div class="col">
@@ -81,7 +81,7 @@
                     'nome' => request()->get('nome', null),
                 ])->links() }}
         </div>
-    </div>
-    <a class="btn btn-success" href="{{ route('funcionarios.create') }}">Novo funcionario</a>
+    </div> --}}
+    <a class="btn btn-success" href="{{ route('enderecos.create') }}">Novo funcionario</a>
 
 @endsection

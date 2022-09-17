@@ -31,7 +31,7 @@ class ClientController extends Controller
      */
     public function show(int $id): View
     {
-        $client = Client::find($id);
+        $client = Client::findOrFail($id);
 
         return view('clients.show', [
             'client' => $client
@@ -71,7 +71,7 @@ class ClientController extends Controller
      */
     public function edit(int $id): View
     {
-        $client = Client::find($id);
+        $client = Client::findOrFail($id);
 
         return view('clients.edit', [
             'client' => $client
@@ -87,7 +87,7 @@ class ClientController extends Controller
      */
     public function update(int $id, Request $request): RedirectResponse
     {
-        $client = Client::find($id);
+        $client = Client::findOrFail($id);
 
         $client->update([
             'nome' => $request->nome,
@@ -106,7 +106,7 @@ class ClientController extends Controller
      */
     public function destroy(int $id): RedirectResponse
     {
-        $client = Client::find($id);
+        $client = Client::findOrFail($id);
 
         $client->delete();
 

@@ -11,6 +11,7 @@
     <title> @yield('titulo') </title>
 </head>
 
+
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
@@ -27,6 +28,10 @@
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page"
                             href="{{ route('funcionarios.index') }}">Funcionarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="{{ route('enderecos.index') }}">Endereços</a>
                     </li>
                 </ul>
             </div>

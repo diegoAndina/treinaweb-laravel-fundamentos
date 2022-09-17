@@ -7,9 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Funcionario extends Model
 {
+    use HasFactory;
 
     protected $fillable = [
         'nome', 'cpf', 'situacao', 'salario', 'data_contratacao', 'data_demissao'
     ];
-    use HasFactory;
+
+    /**
+     *
+     *
+     * Define a relacao com endereço
+     *
+     */
+    public function endereco()
+    {
+        return $this->hasOne(Endereco::class);
+    }
 }
