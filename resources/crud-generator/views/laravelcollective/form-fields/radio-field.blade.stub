@@ -1,6 +1,6 @@
 <div class="checkbox">
-    <label>{!! Form::radio('%%itemName%%', '1') !!} Yes</label>
+    <label>{!! Form::radio('%%itemName%%', '1') !!} Sim</label>
 </div>
 <div class="checkbox">
-    <label>{!! Form::radio('%%itemName%%', '0', true) !!} No</label>
+    <label>{!! Form::radio('%%itemName%%', '0', true) !!} Não</label>
 </div>

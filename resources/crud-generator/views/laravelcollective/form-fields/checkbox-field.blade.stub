@@ -1,6 +1,6 @@
 <div class="checkbox">
-    <label>{!! Form::checkbox('%1$s', '1') !!} Yes</label>
+    <label>{!! Form::checkbox('%1$s', '1') !!} Sim</label>
 </div>
 <div class="checkbox">
-    <label>{!! Form::checkbox('%1$s', '0', true) !!} No</label>
+    <label>{!! Form::checkbox('%1$s', '0', true) !!} Não</label>
 </div>
