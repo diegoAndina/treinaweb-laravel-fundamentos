@@ -1,0 +1,5 @@
+REMOVER DEPENDENCIAS
+
+composer remove nome/dependecia
+
+composer update

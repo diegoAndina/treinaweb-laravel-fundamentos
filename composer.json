@@ -17,7 +17,6 @@
         "league/commonmark": "2.3"
     },
     "require-dev": {
-        "appzcoder/crud-generator": "^3.3",
         "barryvdh/laravel-debugbar": "^3.7",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
